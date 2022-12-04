@@ -1,0 +1,69 @@
+/* Root element */
+:root{
+    --background-color: #2E3440;
+    --accent-color: #EBCB8B;
+    --font-color: #fff;
+    --font-family: 'Fira Code', monospace;
+    --font-size: 14px;
+    --border-radius: 0.5rem;
+}
+body{
+    background-color: var(--background-color);
+    color: var(--font-color);
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Inputs container */
+.inputs{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+/* Number input */
+input[type="number"]{
+    background-color: var(--background-color);
+    color: var(--font-color);
+    border: 1px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    padding: 0.2rem;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    margin: 10px 0;
+}
+/* Button */
+input[type="submit"]{
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: 1px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    padding: 0.2rem;
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    width: 99%;
+    margin: 10px 0;
+    transition: all .2s linear;
+}
+input[type="submit"]:hover{
+    background-color: var(--background-color);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+/* Slider */
+input[type="range"]{
+    -webkit-appearance: none;
+    width: 100px;
+    height: 10px;
+    border-radius: 5px;
+    background: var(--accent-color);
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin-right: 10px;
+}

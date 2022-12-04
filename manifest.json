@@ -1,0 +1,22 @@
+{ 
+"manifest_version": 3,
+"name": "Youtube speed changer",
+"description": "Simple chrome extension that allows you to quickly set custom playback speed for youtube videos",
+"version": "1",
+"author": "Aleksander Jóźwik",
+"permissions": ["storage", "tabs","activeTab","declarativeContent","webNavigation"],
+"action": {  "default_popup": "index.html" },
+"host_permissions": ["https://*.youtube.com/*"],
+"content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/*"],
+      "js": ["scripts/content.js"]
+    }
+],
+"icons":{
+  "744": "favicon.png"
+},
+"background": {
+    "service_worker": "scripts/background.js"
+  }
+}
