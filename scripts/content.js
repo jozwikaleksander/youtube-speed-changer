@@ -6,7 +6,6 @@ const videoObj = document.querySelector('video');
 
 const changeSpeed = () => {
     videoObj.playbackRate = speed;
-    console.log(`Speed set on ${videoObj.playbackRate}`);
 }
 
 chrome.storage.sync.get('speed', (result) => {
@@ -18,7 +17,6 @@ chrome.storage.sync.get('speed', (result) => {
 })
  
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    console.log(request);
     speed = request.speed;
     changeSpeed();
 });
@@ -26,7 +24,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 var observer = new MutationObserver(function(mutations) {
     mutations.forEach(mutation => {
         if(mutation.attributeName === 'src'){
-            console.log('src changed');
             changeSpeed();
         }
     })

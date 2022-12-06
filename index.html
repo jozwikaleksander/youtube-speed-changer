@@ -7,13 +7,23 @@
     <title>Youtube Speed Changer</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
 </head>
 <body>
     <form>
-        ⏩ Playback speed
+        <h4><i class="fa-solid fa-forward"></i> Playback speed</h4>
         <div class="inputs">
             <input type="range" min="1" max="32" value="4" class="slider">
             <input type="number" class="num-input"id="speed" value="1" min="0.25" max="256" step="0.25">
+        </div>
+
+        <div class="shortcuts">
+            <input type="button" value="0.5" class="shortcut-btn">
+            <input type="button" value="1.0" class="shortcut-btn">
+            <input type="button" value="1.25" class="shortcut-btn">
+            <input type="button" value="1.5" class="shortcut-btn">
+            <input type="button" value="2.0" class="shortcut-btn">
+            <input type="button" value="4.0" class="shortcut-btn">
         </div>
         <input type="submit" id="apply" value="Apply">
     </form>

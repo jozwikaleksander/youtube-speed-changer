@@ -18,6 +18,12 @@ body{
     align-items: center;
     justify-content: center;
 }
+/* Header */
+h4{
+    margin: 0;
+    text-align: center;
+    font-weight: normal;
+}
 /* Inputs container */
 .inputs{
     display: flex;
@@ -66,4 +72,27 @@ input[type="range"]{
     -webkit-transition: .2s;
     transition: opacity .2s;
     margin-right: 10px;
+}
+.shortcuts{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+.shortcut-btn{
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    border: 1px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    font-family: var(--font-family);
+    transition: all .2s linear;
+    margin: 0 5px;
+    padding: 3px;
+    width: 99%;
+    font-size: var(--font-size);
+}
+.shortcut-btn:hover{
+    background-color: transparent;
+    color: var(--accent-color);
 }

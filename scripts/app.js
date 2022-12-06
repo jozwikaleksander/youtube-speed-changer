@@ -32,3 +32,17 @@ form.addEventListener('submit', (e) => {
         chrome.tabs.sendMessage(tabs[0].id, {speed: speed});
     });
 });
+
+const shortcutButtons = document.querySelectorAll('.shortcut-btn');
+
+shortcutButtons.forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+        speed = parseFloat(e.target.value);
+        slider.value = speed*4;
+        numberForm.value = speed;
+        chrome.storage.sync.set({'speed': speed});
+        chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
+            chrome.tabs.sendMessage(tabs[0].id, {speed: speed});
+        });
+    });
+});
