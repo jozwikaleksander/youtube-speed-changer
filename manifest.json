@@ -15,8 +15,5 @@
 ],
 "icons":{
   "744": "favicon.png"
-},
-"background": {
-    "service_worker": "scripts/background.js"
-  }
+}
 }
